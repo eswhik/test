@@ -1,0 +1,157 @@
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: solid 1px #144ab7;
+    border-bottom: solid 4px #144ab7;
+}
+
+.video-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.342);
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #144ab7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sv-ct {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.server-buttons {
+    background: radial-gradient(circle, rgb(34 50 84) 0%, rgb(0 0 0) 100%);
+    border-radius: 6px;
+    padding: 10px;
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.server-buttons .btnx {
+    margin-bottom: 10px;
+}
+
+.btnx {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.terabox {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: solid 2px #6032df;
+    background: radial-gradient(circle, rgb(93, 13, 197) 0%, rgb(20, 37, 44) 100%);
+    text-shadow: 2px 2px 4px #391e83;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.doostream {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: solid 2px #ffd900;
+    background: radial-gradient(circle, rgb(255, 208, 0) 0%, rgb(95, 81, 0) 100%);
+    text-shadow: 2px 2px 4px #7a6800;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.mega {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: solid 2px #ff0000;
+    background: radial-gradient(circle, rgb(238, 4, 4) 0%, rgb(82, 0, 0) 100%);
+    text-shadow: 2px 2px 4px #810000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.netu {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: solid 2px #00b7ff;
+    background: radial-gradient(circle, rgb(4, 164, 238) 0%, rgb(0, 59, 82) 100%);
+    text-shadow: 2px 2px 4px #006086;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.icon-play path {
+    fill: #ffffff;
+}
