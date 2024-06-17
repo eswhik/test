@@ -1,21 +1,36 @@
-function loadCSS(url) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = url;
-    document.head.appendChild(link);
+function setCookie(name, value, minutes) {
+    const d = new Date();
+    d.setTime(d.getTime() + (minutes * 60 * 1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
-loadCSS('https://cdn.jsdelivr.net/gh/eswhik/test/link-v1.css');
+function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(cname) == 0) {
+            return c.substring(cname.length, c.length);
+        }
+    }
+    return "";
+}
 
 const overlayLink = document.getElementById("overlay-link");
 const floatingWindow = document.getElementById("floatingWindow");
 const iframeContainer = document.getElementById("iframeContainer");
 const btn = document.getElementById("btnDirectLink");
-const countdownSpan = document.getElementById("countdown");
 
 function cerrarVentanaFlotante() {
     overlayLink.style.display = "none";
     floatingWindow.style.display = "none";
+    const data = JSON.parse(btn.getAttribute('data-link'));
+    setCookie("scriptShown", "true", data.intervalMinutes);
 }
 
 function abrirVentanaFlotante() {
@@ -23,7 +38,6 @@ function abrirVentanaFlotante() {
     floatingWindow.style.display = "block";
 
     const iframeSrc = iframeContainer.getAttribute('data-src');
-
     const iframe = document.createElement("iframe");
     iframe.src = iframeSrc;
     iframe.width = "100%";
@@ -35,12 +49,12 @@ function abrirVentanaFlotante() {
     const data = JSON.parse(btn.getAttribute('data-link'));
 
     let countdown = data.countdown;
-    countdownSpan.textContent = countdown;
+    btn.innerHTML = data.wait.replace("{seconds}", countdown);
 
     const countdownInterval = setInterval(function() {
-        if (countdown > 0) {
+        if (countdown > 1) {
             countdown--;
-            countdownSpan.textContent = countdown;
+            btn.innerHTML = data.wait.replace("{seconds}", countdown);
         } else {
             clearInterval(countdownInterval);
             btn.textContent = data.close;
@@ -51,6 +65,12 @@ function abrirVentanaFlotante() {
 }
 
 window.onload = function() {
-    abrirVentanaFlotante();
-    setInterval(abrirVentanaFlotante, 60000);
+    if (!getCookie("scriptShown")) {
+        abrirVentanaFlotante();
+    }
+    setInterval(function() {
+        if (!getCookie("scriptShown")) {
+            abrirVentanaFlotante();
+        }
+    }, 60000);
 };
