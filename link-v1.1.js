@@ -1,3 +1,12 @@
+function loadCSS(url) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    document.head.appendChild(link);
+}
+
+loadCSS('https://cdn.jsdelivr.net/gh/eswhik/test/link-v1.1.css');
+
 function setCookie(name, value, minutes) {
     const d = new Date();
     d.setTime(d.getTime() + (minutes * 60 * 1000));
