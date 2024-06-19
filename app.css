@@ -122,6 +122,21 @@
     text-decoration: none;
 }
 
+.streamwish {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: solid 2px #ff8d00;
+    background: radial-gradient(circle, rgb(255 155 0) 0%, rgb(0 126 255) 100%);
+    text-shadow: 2px 2px 4px #7a4f00;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
 .mega {
     display: inline-flex;
     align-items: center;
