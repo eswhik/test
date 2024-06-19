@@ -5,7 +5,7 @@ function loadCSS(url) {
     document.head.appendChild(link);
 }
 
-loadCSS('https://cdn.jsdelivr.net/gh/eswhik/test/app.css');
+loadCSS('https://cdn.jsdelivr.net/gh/eswhik/test/app.v1.css');
 
 function loadScript(url, callback) {
     const script = document.createElement('script');
