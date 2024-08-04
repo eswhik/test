@@ -8,7 +8,7 @@ function loadFf(url) {
 loadFf('https://cdn.jsdelivr.net/gh/eswhik/test/style-ff.css');
 
 function generarCodigoFreeFire() {
-    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const caracteres = '0123456789';
     const generarSeccionFreeFire = () => Array.from({ length: 3 }, () => caracteres.charAt(Math.floor(Math.random() * caracteres.length))).join('');
 
     return `${generarSeccionFreeFire()}${generarSeccionFreeFire()}${generarSeccionFreeFire()}${generarSeccionFreeFire()}`;
