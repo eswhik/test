@@ -1,0 +1,109 @@
+.rcgd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-code-free-fire {
+    background-color: #121b20;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.226);
+    border-bottom: solid 4px #ffba00;
+    margin: 20px 0;
+    padding: 15px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card-header-free-fire {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.codigo-free-fire {
+    color: #ffffff;
+    background: radial-gradient(circle, rgb(129, 106, 2) 0%, rgb(35, 35, 26) 100%);
+    border: solid 2px #ffba00;
+    text-shadow: 2px 2px 4px #ffffff4d;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#timer-freefire {
+    background: #43525a54;
+    border: solid 1px #43525a;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.flg-free-fire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-free-fire {
+    width: 200px;
+    height: 50px;
+    background-image: url('https://i.ibb.co/BsC2ghZ/logo-ff.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.codigo-free-fire {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.ff-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: #121b20;
+    border: solid 1px #ff2525;
+    box-shadow: 0 4px 8px rgba(255, 29, 29, 0.411);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.copy-ff {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    background: #121b2069;
+    border: solid 1px #02bc7d;
+    box-shadow: 1px 2px 0px 1px #02bc7e56;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.button-canje {
+    display: block;
+    background-color: #e6a90000;
+    border: solid 1px #e6a700;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+    box-shadow: 1px 2px 0px 1px #e6a9006e;
+}
+
+.button-canje:hover {
+    background-color: #e6a700;
+}
