@@ -1,0 +1,106 @@
+.dm {
+    position: relative;
+    width: 90vw;
+    max-width: 400px;
+    height: 80vh;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    margin: 10px;
+}
+
+.fnt {
+    font-size: 15px;
+}
+
+.tg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.form-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container .text-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.form-container .barcode {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form-container .submit-button,
+.form-container .cancel-button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.form-container .submit-button {
+    background-color: #ff1c1c;
+    color: #fff;
+}
+
+.form-container .cancel-button {
+    background-color: #ccc;
+    color: #000;
+}
+
+.form-container p {
+    margin: 5px 0;
+}
+
+.button-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff1c1c38;
+    border: solid 1px #ff1c1c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo-garena {
+    width: 200px;
+    height: 50px;
+    background-image: url('https://i.ibb.co/YQ5ttWg/garena.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 8px;
+    margin-bottom: 15px;
+}
